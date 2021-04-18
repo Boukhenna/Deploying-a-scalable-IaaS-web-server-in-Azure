@@ -47,7 +47,12 @@ For this project, you will write a Packer template and a Terraform template to d
     packer build server.json
     ```
 7. Edit files of Terraform template:
-   - [variables.tf](variables.tf) file: contains variables to manage the template.
+   - [variables.tf](variables.tf) file: contains variables to customize the template, edit the default parameter for each variables.
+       - tenant_id: the tenant_id of your azure session
+       - subscription_id: the subscription_id of your azure session
+       - prefix: the prefix for all the resoures
+       - vmcount: the number of VMs to be created
+       - ...
    - [main.tf](main.tf) file: contains the infrastructure to be created in azure.
 8. Create the infrastructure with Terraform:
    - Initialize Terraform
